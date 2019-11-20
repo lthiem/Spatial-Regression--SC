@@ -2013,22 +2013,22 @@ summary(sp.lag.model, Nagelkerke = TRUE)</code></pre>
 <pre class="r"><code>summary(impacts(sp.lag.model, listw = cont.neighb, R=100), zstats = TRUE)[[&quot;pzmat&quot;]]</code></pre>
 <pre><code>## Warning: Method impacts.sarlm moved to the spatialreg package</code></pre>
 <pre><code>##                        Direct  Indirect         Total
-## rural           0.82198192754 0.9178773 0.83132612815
-## urban           0.01251976317 0.2671007 0.01676755447
-## lnmanufacturing 0.05258794367 0.3117228 0.05731046850
-## lnag            0.81480235835 0.6247037 0.77582662310
-## lnretail        0.67327683486 0.8449952 0.68841588985
-## lnhealthss      0.94226195480 0.9485969 0.94185465245
-## lnconstruction  0.05831865086 0.3291415 0.05915272086
-## lnlesshs        0.00001161329 0.2428085 0.00007437947
-## lnunemployment  0.15344925172 0.4480555 0.15873842301
-## lnsinglemom     0.00746925352 0.3127807 0.01407112229
-## lnblack         0.07970928058 0.3990662 0.07784092136
-## lnhispanic      0.61141271247 0.7800235 0.61834161088
-## lnuninsured     0.05996673815 0.3324451 0.07117907451
-## lnincome_ratio  0.60254056024 0.6433967 0.59619829248
-## lnteenbirth     0.26062472623 0.4805094 0.26787805110
-## lnunmarried     0.00077427941 0.2426098 0.00120730132</code></pre>
+## rural           0.66979610165 0.7150253 0.66691838555
+## urban           0.01466022867 0.2736703 0.01032226536
+## lnmanufacturing 0.08019880271 0.3607714 0.07014081949
+## lnag            0.84505294191 0.7216119 0.82371919920
+## lnretail        0.62624958753 0.6308002 0.61612558054
+## lnhealthss      0.97563658694 0.9968647 0.97775654152
+## lnconstruction  0.03180119687 0.3496988 0.04262767486
+## lnlesshs        0.00001658497 0.2368480 0.00003613433
+## lnunemployment  0.23959657132 0.4421924 0.23723341129
+## lnsinglemom     0.00036185091 0.2381895 0.00027073208
+## lnblack         0.04531366082 0.3107396 0.04369118097
+## lnhispanic      0.68439714318 0.6792508 0.67450691048
+## lnuninsured     0.06484340610 0.3068455 0.07090156341
+## lnincome_ratio  0.62044012362 0.6027333 0.60712432819
+## lnteenbirth     0.16462927428 0.4806059 0.18364926296
+## lnunmarried     0.00022619884 0.2375174 0.00024897047</code></pre>
 </div>
 <div id="spatial-error-model" class="section level3">
 <h3>Spatial Error Model</h3>
@@ -2166,23 +2166,23 @@ summary(sp.err.model, Nagelkerke = TRUE)</code></pre>
 ## LM test for residual autocorrelation
 ## test value: 0.73217, p-value: 0.39218</code></pre>
 <pre class="r"><code>summary(spatialreg::impacts(sdm, listw = cont.neighb, R = 100), zstats = TRUE)[[&quot;pzmat&quot;]]</code></pre>
-<pre><code>##                        Direct   Indirect      Total
-## rural           0.75387483718 0.03513650 0.09303966
-## urban           0.11201048106 0.04648239 0.01550365
-## lnmanufacturing 0.11070795404 0.56808598 0.24070207
-## lnag            0.40003420878 0.70841748 0.38827624
-## lnretail        0.21302796794 0.97471687 0.61018057
-## lnhealthss      0.63572623308 0.61165038 0.52506246
-## lnconstruction  0.01851917539 0.68701647 0.53190525
-## lnlesshs        0.00008369168 0.57862091 0.02466507
-## lnunemployment  0.98311968441 0.57213816 0.60437651
-## lnsinglemom     0.00052844998 0.84533771 0.34966334
-## lnblack         0.15367825813 0.69435778 0.14927146
-## lnhispanic      0.07881182705 0.01077055 0.06864818
-## lnuninsured     0.00984551063 0.79574039 0.19306650
-## lnincome_ratio  0.38402209473 0.12123295 0.31074526
-## lnteenbirth     0.40540473119 0.47199351 0.72496231
-## lnunmarried     0.00233515907 0.11206942 0.01228173</code></pre>
+<pre><code>##                       Direct   Indirect      Total
+## rural           0.7084246356 0.03625868 0.07767430
+## urban           0.1322129290 0.07248021 0.01895832
+## lnmanufacturing 0.0761934513 0.48755249 0.12909680
+## lnag            0.3118117695 0.75124708 0.35210815
+## lnretail        0.2102875368 0.97697486 0.65222238
+## lnhealthss      0.5732621288 0.66239886 0.50077818
+## lnconstruction  0.0083305328 0.54627457 0.54609703
+## lnlesshs        0.0000309883 0.63342360 0.01232865
+## lnunemployment  0.9784363512 0.79920382 0.80315281
+## lnsinglemom     0.0011916213 0.86553533 0.31243377
+## lnblack         0.3353022822 0.50819896 0.05656729
+## lnhispanic      0.1243387453 0.00447735 0.04692106
+## lnuninsured     0.0042642752 0.71959432 0.14332326
+## lnincome_ratio  0.2209806128 0.09559784 0.31078957
+## lnteenbirth     0.3431347592 0.50772635 0.77406870
+## lnunmarried     0.0055530152 0.16039838 0.01640951</code></pre>
 <pre class="r"><code>spatialreg::LR.sarlm(sdm,SLX.model)</code></pre>
 <pre><code>## 
 ##  Likelihood ratio for spatial linear models
